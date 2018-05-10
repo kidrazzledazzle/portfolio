@@ -1,0 +1,220 @@
+body {
+    background: radial-gradient(#3cc, #0b4444);
+    min-width: 200px;
+}
+
+#container {
+    background-color: white;
+    margin: auto;
+    min-width: 200px;
+    padding: 0px 2% 10% 2%;
+    max-width: 800px;
+    font-family: "Source Sans Pro";
+    box-shadow: 0px 0px 10px 1px #000;
+
+}
+
+/* hilarious head rocking animation with keyframes */
+
+@keyframes swing {
+    0%,
+    100% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+
+}
+
+/* header section */
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    max-width: 100px;
+    margin-right: auto;
+    padding: 20px 10px;
+    animation: swing 3s infinite ease-in-out;
+
+}
+
+#header-right {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* my name */
+
+#title {
+    font-weight: 200;
+    font-size: 3em;
+    margin: 0 0;
+}
+
+/* the words under my name */
+
+#subtitle {
+    font-weight: 400;
+    flex-wrap: wrap;
+    margin: 0 0;
+
+}
+
+/* horizontal line */
+
+hr {
+    background-color: #7d97ad;
+    height: 3px;
+
+}
+
+/*featured image section */
+
+main {
+    max-width: 800px;
+    min-width: 200px;
+    box-shadow: 0px 1px 8px 3px #bbb;
+}
+
+#img-main {
+    max-width: 100%;
+    min-width: 100px;
+}
+
+/* other projects in columns beneath featured image */
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+}
+
+.caption {
+    font-size: 2em;
+}
+
+a {
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+/* BREAKPOINTS SECTION -----------------------------*/
+
+/* 0-500px breakpoint */
+
+@media screen and (min-width: 601px) {
+    .gallery {
+        display: flex;
+    }
+
+    .col {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .col:last-child {
+        margin-right: 0px;
+    }
+
+    .img {
+        max-width: 100%;
+        flex: 0 0 300px;
+        box-shadow: 0px 1px 8px 3px #bbb;
+    }
+    a {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+/* Screen width almost small */
+
+@media screen and (min-width: 501px) and (max-width: 599px) {
+    #title {
+        font-size: 2em;
+    }
+
+    .gallery {
+        display: flex;
+    }
+
+    .col {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .col:last-child {
+        margin-right: 0px;
+    }
+    /* removes right column from final .col element */
+    .img {
+        max-width: 100%;
+        flex: 0 0 300px;
+        box-shadow: 0px 1px 8px 3px #bbb;
+    }
+    a {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+    a {
+        font-size: 1.5em;
+    }
+}
+
+/* Screen width small */
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+
+    #logo {
+        max-width: 50px;
+        margin-right: auto;
+        padding: 20px 10px;
+    }
+
+    #title {
+        font-weight: 200;
+        font-size: 1.5em;
+        margin: 0 0;
+    }
+
+    #subtitle {
+        font-weight: 400;
+        font-size: 1em;
+        flex-wrap: wrap;
+        margin: 0 0;
+
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .gallery {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    .col {
+        margin: 10px 10px;
+    }
+
+    a {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+    .img {
+        max-width: 100%;
+        min-width: 200px;
+        box-shadow: 0px 1px 8px 3px #bbb;
+    }
+}
